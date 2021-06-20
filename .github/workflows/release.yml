@@ -30,7 +30,11 @@ jobs:
       - run: |
           pwd
           ls
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+        
+      - name: Zip files
+        run: zip -r seichi_tex.zip * -x .github
+        
+      - uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact
+          path: ./seichi_tex.zip
