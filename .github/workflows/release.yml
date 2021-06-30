@@ -8,11 +8,23 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
+      
+      - name: Set version
+        id: version
+        run: |
+          VERSION=$(echo ${{ github.ref }} | sed -e "s#refs/tags/##g")
+          echo ::set-output name=version::$VERSION
+          echo "Version: $VERSION"
         
       - name: Zip files
-        run: zip -r seichi_tex.zip * -x .github
+        run: zip -r seichi_tex_${{ steps.version.outputs.version }}.zip * -x .github
+        
+      - run: ls
+
+      - name: Send a zip to server
+        run: echo 'Unimplemnted.'
