@@ -16,8 +16,3 @@ jobs:
         
       - name: Zip files
         run: zip -r seichi_tex.zip * -x .github
-        
-      - uses: actions/upload-artifact@v2
-        with:
-          name: my-artifact
-          path: ./seichi_tex.zip
