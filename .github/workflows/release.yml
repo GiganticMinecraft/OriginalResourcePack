@@ -16,11 +16,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      
-      - name: test command
-        run: |
-          ls
-          pwd
         
       - name: Zip files
         run: zip -r seichi_tex.zip * -x .github
