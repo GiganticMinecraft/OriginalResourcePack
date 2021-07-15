@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      
+
       - name: Set versions
         id: versions
         run: |
@@ -19,10 +19,10 @@ jobs:
           NEW_VERSION=$(grep -o -m 1 -E "(v[0-9]+\.){1}[0-9]+(\.[0-9]+)?" UpdateLog.txt)
           echo ::set-output name=new_version::$NEW_VERSION
           echo "New Version: $NEW_VERSION"
-          
+
       - name: Update pack.mcmeta
         run: sed -i -r 's/(v[0-9]+\.){1}[0-9]+(\.[0-9]+)?/${{ steps.versions.outputs.new_version }}/' pack.mcmeta
-        
+
       - name: Commit and push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
