@@ -1,4 +1,4 @@
-name: Release zip file
+name: Release resource pack
 
 on:
   workflow_dispatch:
