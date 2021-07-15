@@ -1,10 +1,6 @@
 name: Release zip file
 
 on:
-  push:
-    tags:
-      - "v*"
-
   workflow_dispatch:
 
 jobs:
@@ -17,7 +13,7 @@ jobs:
       - name: Set version
         id: version
         run: |
-          VERSION=$(echo ${{ github.ref }} | sed -e "s#refs/tags/##g")
+          VERSION=$(grep -o -m 1 -E "(v[0-9]+\.){1}[0-9]+(\.[0-9]+)?" UpdateLog.txt)
           echo ::set-output name=version::$VERSION
           echo "Version: $VERSION"
         
