@@ -26,9 +26,9 @@ jobs:
       - name: Commit and push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-	  git config --local user.name "github-actions[bot]"
+          git config --local user.name "github-actions[bot]"
 
-          git add
+          git add -A
           git commit -m '[Bump] ${{ steps.versions.outputs.old_version }} -> ${{ steps.versions.outputs.new_version }}'
           git push https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/OriginalResourcePack.git HEAD
 
