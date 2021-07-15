@@ -16,7 +16,7 @@ jobs:
           OLD_VERSION=$(grep -o -m 1 -E "(v[0-9]+\.){1}[0-9]+(\.[0-9]+)?" pack.mcmeta)
           echo ::set-output name=old_version::$OLD_VERSION
           echo "Old Version: $OLD_VERSION"
-          NEW_VERSION=$(grep -o -m 1 -E "(v[0-9]+\.){1}[0-9]+(\.[0-9]+)?" UpdateLog.txt)
+          NEW_VERSION=$(grep -o -m 1 -E "(v[0-9]+\.){1}[0-9]+(\.[0-9]+)?" UpdatedLog.md)
           echo ::set-output name=new_version::$NEW_VERSION
           echo "New Version: $NEW_VERSION"
 
