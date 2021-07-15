@@ -46,7 +46,7 @@ jobs:
 
       - uses: actions/upload-artifact@v2
         with:
-          name: zip-file
+          name: zip_file
           path: ${{ steps.zip_name.outputs.zip_name }}
 
   send_zip:
@@ -56,7 +56,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v2
         with:
-          name: zip-file
+          name: zip_file
 
       - name: Send zip to server
         run: echo "Unimplemnted."
@@ -70,6 +70,6 @@ jobs:
 
       - uses: actions/download-artifact@v2
         with:
-          name: zip-file
+          name: zip_file
 
       - run: ls
