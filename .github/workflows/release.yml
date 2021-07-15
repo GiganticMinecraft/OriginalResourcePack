@@ -30,7 +30,7 @@ jobs:
 
           git add -A
           git commit -m '[Bump] ${{ steps.versions.outputs.old_version }} -> ${{ steps.versions.outputs.new_version }}'
-          git push https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/OriginalResourcePack.git HEAD
+          git push https://${{ secrets.GITHUB_ACTOR }}:${{ secrets.GITHUB_TOKEN }}@github.com/OriginalResourcePack.git HEAD
 
       - name: Zip files
         run: zip -r seichi_tex_${{ steps.versions.outputs.new_version }}.zip *
