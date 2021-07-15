@@ -7,6 +7,7 @@ jobs:
   prepare_to_send_zip:
     runs-on: ubuntu-latest
     outputs:
+      new_version: ${{ steps.versions.outputs.new_version }}
       zip_name: ${{ steps.zip_name.outputs.zip_name }}
 
     steps:
@@ -73,4 +74,9 @@ jobs:
         with:
           name: zip_file
 
-      - run: ls
+      - uses: ncipollo/release-action@v1
+        with:
+          artifacts: ${{ needs.prepare_to_send_zip.outputs.zip_name }}
+          # bodyFile: "body.md"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ needs.prepare_to_send_zip.outputs.new_version }}
