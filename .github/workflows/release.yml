@@ -51,7 +51,7 @@ jobs:
 
   send_zip:
     runs-on: ubuntu-latest
-    needs: bump_version
+    needs: prepare_to_send_zip
 
     steps:
       - uses: actions/download-artifact@v2
@@ -63,7 +63,7 @@ jobs:
 
   make_github_release:
     runs-on: ubuntu-latest
-    needs: bump_version
+    needs: prepare_to_send_zip
 
     steps:
       - uses: actions/checkout@v2
