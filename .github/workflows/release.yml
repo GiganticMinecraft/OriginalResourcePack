@@ -61,7 +61,7 @@ jobs:
       - name: Send zip to server
         run: echo "Unimplemnted."
 
-  make_github-release:
+  make_github_release:
     runs-on: ubuntu-latest
     needs: bump_version
 
