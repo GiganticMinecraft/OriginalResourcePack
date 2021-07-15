@@ -1,10 +1,6 @@
 name: Release zip file
 
 on:
-  push:
-    tags:
-      - "v*"
-
   workflow_dispatch:
 
 jobs:
@@ -13,16 +9,31 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      
-      - name: Set version
-        id: version
+
+      - name: Set versions
+        id: versions
         run: |
-          VERSION=$(echo ${{ github.ref }} | sed -e "s#refs/tags/##g")
-          echo ::set-output name=version::$VERSION
-          echo "Version: $VERSION"
-        
+          OLD_VERSION=$(grep -o -m 1 -E "(v[0-9]+\.){1}[0-9]+(\.[0-9]+)?" pack.mcmeta)
+          echo ::set-output name=old_version::$OLD_VERSION
+          echo "Old Version: $OLD_VERSION"
+          NEW_VERSION=$(grep -o -m 1 -E "(v[0-9]+\.){1}[0-9]+(\.[0-9]+)?" UpdatedLog.md)
+          echo ::set-output name=new_version::$NEW_VERSION
+          echo "New Version: $NEW_VERSION"
+
+      - name: Update pack.mcmeta
+        run: sed -i -r 's/(v[0-9]+\.){1}[0-9]+(\.[0-9]+)?/${{ steps.versions.outputs.new_version }}/' pack.mcmeta
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          git add -A
+          git commit -m '[Bump] ${{ steps.versions.outputs.old_version }} -> ${{ steps.versions.outputs.new_version }}'
+          git push https://${{ secrets.GITHUB_ACTOR }}:${{ secrets.GITHUB_TOKEN }}@github.com/OriginalResourcePack.git HEAD
+
       - name: Zip files
-        run: zip -r seichi_tex_${{ steps.version.outputs.version }}.zip *
+        run: zip -r seichi_tex_${{ steps.versions.outputs.new_version }}.zip *
 
       - name: Send a zip to server
         run: echo 'Unimplemnted.'
