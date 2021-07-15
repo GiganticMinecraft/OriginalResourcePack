@@ -31,7 +31,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
 
           git add -A
-          git commit -m "[Bump] ${{ steps.versions.outputs.old_version }} -> ${{ steps.versions.outputs.new_version }}""
+          git commit -m "[Bump] ${{ steps.versions.outputs.old_version }} -> ${{ steps.versions.outputs.new_version }}"
           git push origin HEAD
 
   make_and_send_zip:
