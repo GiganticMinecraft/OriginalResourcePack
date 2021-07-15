@@ -54,4 +54,4 @@ jobs:
         run: zip -r ${{ steps.zip_name.outputs.zip_name }} *
 
       - name: Send a zip to server
-        run: echo 'Unimplemnted.'
+        run: echo "Unimplemnted."
