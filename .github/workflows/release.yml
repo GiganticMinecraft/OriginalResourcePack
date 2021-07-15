@@ -16,6 +16,9 @@ jobs:
           VERSION=$(grep -o -m 1 -E "(v[0-9]+\.){1}[0-9]+(\.[0-9]+)?" UpdateLog.txt)
           echo ::set-output name=version::$VERSION
           echo "Version: $VERSION"
+          
+      - name: Update pack.mcmeta
+        run: sed -i -r 's/(v[0-9]+\.){1}[0-9]+(\.[0-9]+)?/${{ steps.version.outputs.version }}/' pack.mcmeta
         
       - name: Zip files
         run: zip -r seichi_tex_${{ steps.version.outputs.version }}.zip *
