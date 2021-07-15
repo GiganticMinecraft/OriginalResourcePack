@@ -52,3 +52,15 @@ jobs:
           name: zip-file
           path: seichi_tex_${{ needs.bump_version.outputs.new_version }}.zip
 
+  make_github-release:
+    runs-on: ubuntu-latest
+    needs: [bump_version, make_and_send_zip]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/download-artifact@v2
+        with:
+          name: zip-file
+
+      - run: ls
