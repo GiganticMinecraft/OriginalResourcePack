@@ -80,6 +80,8 @@ jobs:
           sudo apt-get update && sudo apt-get install pcre2-utils -y
           pcre2grep -M "##[\s\S]*?(?=## ${{ needs.prepare_to_send_zip.outputs.old_version }})" UpdatedLog.md | sed '${/^$/d;}' > note.md
 
+      - run: ls
+
       - run: cat note.md
 
       - uses: ncipollo/release-action@v1
