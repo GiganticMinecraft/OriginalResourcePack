@@ -76,7 +76,7 @@ jobs:
 
       - name: Extract release notes from UpdatedLog.md
         run: |
-          sudo apt^get update && sudo apt-get install pcre2-utils -y
+          sudo apt-get update && sudo apt-get install pcre2-utils -y
           pcre2grep -m 1 -M '##[\s\S]*?(?=#)' UpdatedLog.md | sed '${/^$/d;}' > note.md
 
       - run: cat note.md
