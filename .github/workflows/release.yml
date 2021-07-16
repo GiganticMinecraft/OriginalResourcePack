@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       new_version: ${{ steps.versions.outputs.new_version }}
+      old_version: ${{ steps.versions.outputs.old_version }}
       zip_name: ${{ steps.zip_name.outputs.zip_name }}
 
     steps:
@@ -77,7 +78,7 @@ jobs:
       - name: Extract release notes from UpdatedLog.md
         run: |
           sudo apt-get update && sudo apt-get install pcre2-utils -y
-          pcre2grep -M '##[\s\S]*?(?=#)' UpdatedLog.md | sed '${/^$/d;}' > note.md
+          pcre2grep -M '##[\s\S]*?(?=## ${{ needs.prepare_to_send_zip.outputs.old_version }})' UpdatedLog.md | sed '${/^$/d;}' > note.md
 
       - run: cat note.md
 
