@@ -74,9 +74,14 @@ jobs:
         with:
           name: zip_file
 
+      - name: Extract release notes from UpdatedLog.md
+        run: |
+          sudo apt update && sudo apt install pcre2-utils -y
+          pcre2grep -M '##[\s\S]*?(?=#)' UpdatedLog.md | sed '${/^$/d;}' > note.md
+
       - uses: ncipollo/release-action@v1
         with:
           artifacts: ${{ needs.prepare_to_send_zip.outputs.zip_name }}
-          # bodyFile: "body.md"
+          bodyFile: "note.md"
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ needs.prepare_to_send_zip.outputs.new_version }}
