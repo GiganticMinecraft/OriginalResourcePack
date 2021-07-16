@@ -78,7 +78,7 @@ jobs:
       - name: Extract release notes from UpdatedLog.md
         run: |
           sudo apt-get update && sudo apt-get install pcre2-utils -y
-          pcre2grep -M '##[\s\S]*?(?=## ${{ needs.prepare_to_send_zip.outputs.old_version }})' UpdatedLog.md | sed '${/^$/d;}' > note.md
+          pcre2grep -M "##[\s\S]*?(?=## ${{ needs.prepare_to_send_zip.outputs.old_version }})" UpdatedLog.md | sed '${/^$/d;}' > note.md
 
       - run: cat note.md
 
