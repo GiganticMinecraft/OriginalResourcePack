@@ -72,6 +72,13 @@ jobs:
           github-token: $GITHUB_TOKEN
           number: ${{ steps.create_release_pr.outputs.pull-request-number }}
 
+      - name: Create Tag
+        run: |
+          git checkout main
+          git push --set-upstream origin main
+          git tag ${{ steps.versions.outputs.new_version }}
+          git push origin --tags
+
       - name: Set zip file name
         id: zip_name
         run: |
