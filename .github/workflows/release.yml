@@ -31,11 +31,11 @@ jobs:
           echo $O_VER
           echo $N_VER
 
-          if ![ 1 -eq "$(echo "${N_VER} > ${O_VER}" | bc)" ]; then
-            echo "Err"
+          if [ 1 -eq "$(echo "${N_VER} > ${O_VER}" | bc)" ]; then
+            echo "Ok"
             exit 1
           else
-            echo "Ok"
+            echo "Err"
             exit 1
           fi
 
