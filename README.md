@@ -14,8 +14,7 @@
 
 ## 参考リンク
 
-著作権ガイドライン(<https://red.minecraftserver.jp/projects/public/wiki/Copyright_Guide#3%E7%AB%A0%E3%82%B5%E3%83%BC%E3%83%90%E3%83%86%E3%82%AF%E3%82%B9%E3%83%81%E3%83%A3>
-)もご覧ください。
+[著作権ガイドライン](https://red.minecraftserver.jp/projects/public/wiki/Copyright_Guide#3%E7%AB%A0%E3%82%B5%E3%83%BC%E3%83%90%E3%83%86%E3%82%AF%E3%82%B9%E3%83%81%E3%83%A3)もご覧ください。
 
 ## SpecialThanks
 
