@@ -31,7 +31,7 @@ jobs:
           echo $O_VER
           echo $N_VER
 
-          if [ 1 -eq "$(echo "${NEW_VERSION} > ${OLD_VERSION}" | bc)" ]; then
+          if [ 1 -eq "$(echo "${N_VER} > ${O_VER}" | bc)" ]; then
             echo "Ok"
             exit 1
           else
