@@ -8,6 +8,10 @@
 * 個人利用目的でDLして改変する→OK
 * 改変したものをインターネット上へ公開する→NG
 
+## 更新方法
+
+mainブランチから各自ブランチを作成し、その中で作業を行ってください。終了後は、mainブランチに向けたPRを作成してください。
+
 ## リリース方法
 
 適宜管理者によって行われます。詳細については、[GitHub Wiki](https://github.com/GiganticMinecraft/OriginalResourcePack/wiki#%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E6%96%B9%E6%B3%95)をご覧ください。
