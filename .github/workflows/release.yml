@@ -57,6 +57,7 @@ jobs:
           branch: release
           base: main
           title: "Release ${{ steps.versions.outputs.new_version }}"
+          body: "This PR was created by GitHub Actions to release zip automatically."
 
       - name: Approve Pull Request
         uses: juliangruber/approve-pull-request-action@v1
