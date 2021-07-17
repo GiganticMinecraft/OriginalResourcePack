@@ -16,7 +16,9 @@
 
 * [著作権ガイドライン](https://red.minecraftserver.jp/projects/public/wiki/Copyright_Guide#3%E7%AB%A0%E3%82%B5%E3%83%BC%E3%83%90%E3%83%86%E3%82%AF%E3%82%B9%E3%83%81%E3%83%A3)
 
-## SpecialThanks
+## 謝辞
+
+テクスチャの提供等ご協力いただいた方々です。ありがとうございます。
 
 * arakooAiry3Zkさん（Minestack内のGTテクスチャの修正をしてくださいました。）
 * kouki21さん（木の斧のテクスチャをご提供いただきました。）
