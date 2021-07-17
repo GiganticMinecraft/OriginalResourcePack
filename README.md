@@ -10,7 +10,7 @@
 
 ## リリース方法
 
-[GitHub Wiki](https://github.com/GiganticMinecraft/OriginalResourcePack/wiki#%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E6%96%B9%E6%B3%95)をご覧ください。
+適宜管理者によって行われます。詳細については、[GitHub Wiki](https://github.com/GiganticMinecraft/OriginalResourcePack/wiki#%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E6%96%B9%E6%B3%95)をご覧ください。
 
 ## 参考リンク
 
