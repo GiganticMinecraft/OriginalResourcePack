@@ -59,13 +59,11 @@ jobs:
           title: "Release ${{ steps.versions.outputs.new_version }}"
           body: "This PR was created by GitHub Actions to release zip automatically."
 
-      # - name: Merge Pull Request
-      #   uses: juliangruber/merge-pull-request-action@v1
-      #   with:
-      #     github-token: ${{ secrets.GITHUB_TOKEN }}
-      #     number: ${{ steps.create_release_pr.outputs.pull-request-number }}
-
-      - run: gh pr merge ${{ steps.create_release_pr.outputs.pull-request-number }}
+      - name: Merge Pull Request
+        uses: juliangruber/merge-pull-request-action@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          number: ${{ steps.create_release_pr.outputs.pull-request-number }}
 
       - name: Create Tag
         run: |
