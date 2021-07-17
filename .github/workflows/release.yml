@@ -26,10 +26,10 @@ jobs:
 
       - name: Check versions
         run: |
-          O_VER=$(echo ${{ steps.versions.outputs.old_version }} | sed -e "s/v//")
-          N_VER=$(echo ${{ steps.versions.outputs.new_version }} | sed -e "s/v//")
+          OLD_VER=$(echo ${{ steps.versions.outputs.old_version }} | sed -e "s/v//")
+          NEW_VER=$(echo ${{ steps.versions.outputs.new_version }} | sed -e "s/v//")
 
-          if [ 1 -eq "$(echo "${O_VER} >= ${N_VER}" | bc)" ]; then
+          if [ 1 -eq "$(echo "${OLD_VER} >= ${NEW_VER}" | bc)" ]; then
             echo "バージョン番号が正しくありません。"
             exit 1
           fi
