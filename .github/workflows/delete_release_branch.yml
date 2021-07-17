@@ -1,8 +1,11 @@
+name: Delete release branch
+
 on:
   pull_request:
     branches:
       - main
     types: [closed]
+
 jobs:
   test:
     runs-on: ubuntu-latest
