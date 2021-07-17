@@ -28,8 +28,6 @@ jobs:
         run: |
           O_VER=$(echo ${{ steps.versions.outputs.old_version }} | sed -e "s/v//")
           N_VER=$(echo ${{ steps.versions.outputs.new_version }} | sed -e "s/v//")
-          echo $O_VER
-          echo $N_VER
 
           if [ 1 -eq "$(echo "${O_VER} >= ${N_VER}" | bc)" ]; then
             echo "バージョン番号が正しくありません。"
