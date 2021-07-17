@@ -65,7 +65,6 @@ jobs:
           branch: release
           base: main
           title: "Release ${{ steps.versions.outputs.new_version }}"
-          delete-branch: true
 
       - name: Approve Pull Request
         uses: juliangruber/approve-pull-request-action@v1
