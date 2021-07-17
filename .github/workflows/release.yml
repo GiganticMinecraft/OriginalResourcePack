@@ -2,6 +2,8 @@ name: Release resource pack
 
 on:
   workflow_dispatch:
+    branches:
+      - main
 
 jobs:
   prepare_to_send_zip:
