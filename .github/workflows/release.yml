@@ -32,10 +32,7 @@ jobs:
           echo $N_VER
 
           if [ 1 -eq "$(echo "${O_VER} >= ${N_VER}" | bc)" ]; then
-            echo "Err"
-            exit 1
-          else
-            echo "Ok"
+            echo "バージョン番号が正しくありません。"
             exit 1
           fi
 
