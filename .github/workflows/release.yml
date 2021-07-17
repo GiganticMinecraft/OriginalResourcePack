@@ -26,7 +26,7 @@ jobs:
 
       - name: Check versions
         run: |
-          O_VER=$(echo ${{ steps.versions.outputs.new_version }} | sed -e "s/v//")
+          O_VER=$(echo ${{ steps.versions.outputs.old_version }} | sed -e "s/v//")
           N_VER=$(echo ${{ steps.versions.outputs.new_version }} | sed -e "s/v//")
           echo $O_VER
           echo $N_VER
