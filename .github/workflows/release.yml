@@ -37,7 +37,7 @@ jobs:
       - name: Update version of pack.mcmeta
         run: sed -i -r "s/(v[0-9]+\.){1}[0-9]+(\.[0-9]+)?/${{ steps.versions.outputs.new_version }}/" pack.mcmeta
 
-      - name: Commit and push changes
+      - name: Commit and push a change
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
