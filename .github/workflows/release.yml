@@ -58,6 +58,7 @@ jobs:
           base: main
           title: "Release ${{ steps.versions.outputs.new_version }}"
           body: "This PR was created by GitHub Actions to release zip automatically."
+          delete-branch: true
 
       - name: Merge Pull Request
         uses: juliangruber/merge-pull-request-action@v1
