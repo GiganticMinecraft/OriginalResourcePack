@@ -6,8 +6,6 @@ on:
 jobs:
   prepare_to_send_zip:
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     outputs:
       new_version: ${{ steps.versions.outputs.new_version }}
       old_version: ${{ steps.versions.outputs.old_version }}
@@ -63,13 +61,13 @@ jobs:
       - name: Approve Pull Request
         uses: juliangruber/approve-pull-request-action@v1
         with:
-          github-token: ${{ GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           number: ${{ steps.create_release_pr.outputs.pull-request-number }}
 
       - name: Merge Pull Request
         uses: juliangruber/merge-pull-request-action@v1
         with:
-          github-token: ${{ GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           number: ${{ steps.create_release_pr.outputs.pull-request-number }}
 
       - name: Create Tag
