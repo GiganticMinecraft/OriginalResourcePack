@@ -8,6 +8,10 @@
 * 個人利用目的でDLして改変する→OK
 * 改変したものをインターネット上へ公開する→NG
 
+## リリース方法
+
+[GitHub Wiki](https://github.com/GiganticMinecraft/OriginalResourcePack/blob/main/UpdatedLog.md)をご覧ください。
+
 ## 参考リンク
 
 著作権ガイドライン(<https://red.minecraftserver.jp/projects/public/wiki/Copyright_Guide#3%E7%AB%A0%E3%82%B5%E3%83%BC%E3%83%90%E3%83%86%E3%82%AF%E3%82%B9%E3%83%81%E3%83%A3>
