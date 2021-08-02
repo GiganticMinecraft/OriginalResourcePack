@@ -1,6 +1,7 @@
 # OriginalResourcePack
 
-ギガンティック☆整地鯖で提供されている独自リソースパック（以下「本リソースパック」）です。使用するにはOptifineの導入が必要です。
+ギガンティック☆整地鯖で提供されている独自リソースパック（以下「本リソースパック」）です。使用するにはOptifineの導入が必要です。  
+最新バージョンかどうかは、[GitHubのRelease](https://github.com/GiganticMinecraft/OriginalResourcePack/releases)を参照してください。
 
 ## ライセンス
 
@@ -24,6 +25,7 @@ mainブランチから各自ブランチを作成し、その中で作業を行�
 ## 参考リンク
 
 * [著作権ガイドライン](https://red.minecraftserver.jp/projects/public/wiki/Copyright_Guide#3%E7%AB%A0%E3%82%B5%E3%83%BC%E3%83%90%E3%83%86%E3%82%AF%E3%82%B9%E3%83%81%E3%83%A3)
+* [本パックを管理するGitHubリポジトリ](https://github.com/GiganticMinecraft/OriginalResourcePack)
 
 ## 謝辞
 
