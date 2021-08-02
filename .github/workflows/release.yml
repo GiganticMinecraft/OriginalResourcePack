@@ -81,7 +81,7 @@ jobs:
           echo ::set-output name=zip_name::$ZIP_NAME
           echo "Zip file name: $ZIP_NAME"
 
-      - name: Make zip
+      - name: Make a zip
         run: zip -r ${{ steps.zip_name.outputs.zip_name }} *
 
       - uses: actions/upload-artifact@v2
@@ -98,7 +98,10 @@ jobs:
         with:
           name: zip_file
 
-      - name: Send zip to server
+      - name: Send the zip to the server
+        run: echo "Unimplemnted."
+
+      - name: Update the file path of this pack in spigot config
         run: echo "Unimplemnted."
 
   make_github_release:
