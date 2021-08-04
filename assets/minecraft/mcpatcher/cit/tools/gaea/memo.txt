@@ -1,0 +1,1 @@
+iregex:(\u00a7e\u00a7n\u00a7l)? はMinestackの中のGAEAにテクスチャを当てるため
