@@ -12,7 +12,7 @@ jobs:
       zip_name: ${{ steps.zip_name.outputs.zip_name }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Set versions
         id: versions
@@ -85,7 +85,7 @@ jobs:
     needs: prepare_to_send_zip
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - uses: actions/download-artifact@v2
         with:
