@@ -56,6 +56,11 @@ jobs:
           ZIP_NAME=$(echo "seichi_tex_${{ steps.versions.outputs.new_version }}.zip")
           echo ::set-output name=zip_name::$ZIP_NAME
           echo "Zip file name: $ZIP_NAME"
+          
+      - name: Remove unnecessary files and folders
+        run: |
+          rm -rf .github
+          rm -rf renovate.json
 
       - name: Make a zip
         run: zip -r ${{ steps.zip_name.outputs.zip_name }} *
