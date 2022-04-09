@@ -1,7 +1,5 @@
 name: Optimize resource pack
-on:
-  - push
-  - pull_request
+on: push
 
 jobs:
   packsquash:
