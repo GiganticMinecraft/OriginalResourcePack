@@ -60,7 +60,7 @@ jobs:
       - name: Make a zip
         run: zip -r ${{ steps.zip_name.outputs.zip_name }} *
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: zip_file
           path: ${{ steps.zip_name.outputs.zip_name }}
