@@ -70,7 +70,7 @@ jobs:
     needs: prepare_to_send_zip
 
     steps:
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v3
         with:
           name: zip_file
 
@@ -87,7 +87,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v3
         with:
           name: zip_file
 
