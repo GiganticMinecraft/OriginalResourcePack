@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  prepare_to_send_zip:
+  make_zip:
     runs-on: ubuntu-latest
     outputs:
       new_version: ${{ steps.versions.outputs.new_version }}
