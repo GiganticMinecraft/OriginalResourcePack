@@ -1,7 +1,17 @@
 name: Optimize resource pack
 on:
-  - push
-  - pull_request
+  push:
+    paths-ignore:
+      - ".github/workflows/**.yml"
+      - "!.github/workflows/lint.yml"
+      - "README.md"
+      - "renovate.json"
+  pull_request:
+    paths-ignore:
+      - ".github/workflows/**.yml"
+      - "!.github/workflows/lint.yml"
+      - "README.md"
+      - "renovate.json"
 
 jobs:
   packsquash:
