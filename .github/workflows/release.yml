@@ -79,10 +79,10 @@ jobs:
       - name: Extract release notes from UpdatedLog.md
         run: |
           sudo apt-get update && sudo apt-get install pcre2-utils -y
-          pcre2grep -M "##[\s\S]*?(?=## ${{ needs.prepare_to_send_zip.outputs.old_version }})" UpdatedLog.md | sed '${/^$/d;}' > note.md
+          pcre2grep -M "##[\s\S]*?(?=## ${{ needs.make_zip.outputs.old_version }})" UpdatedLog.md | sed '${/^$/d;}' > note.md
       - uses: ncipollo/release-action@v1
         with:
-          artifacts: ${{ needs.prepare_to_send_zip.outputs.zip_name }}
+          artifacts: ${{ needs.make_zip.outputs.zip_name }}
           bodyFile: "note.md"
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ needs.prepare_to_send_zip.outputs.new_version }}
+          tag: ${{ needs.make_zip.outputs.new_version }}
