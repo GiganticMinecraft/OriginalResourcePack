@@ -32,7 +32,7 @@ jobs:
           fi
       - name: Update version of pack.mcmeta
         run: sed -i -r "s/(v[0-9]+\.){1}[0-9]+(\.[0-9]+)?/${{ steps.versions.outputs.new_version }}/" pack.mcmeta
-      - uses: Lucky3028/git-as-gha@v1.0.0
+      - uses: Lucky3028/git-as-gha@v1.0.1
       - name: Commit a change, create a tag and push the changes
         run: |
           git add -A
