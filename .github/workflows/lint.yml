@@ -21,4 +21,4 @@ jobs:
         with:
           fetch-depth: 0
       - name: Run PackSquash
-        uses: ComunidadAylas/PackSquash-action@v3
+        uses: ComunidadAylas/PackSquash-action@v4
