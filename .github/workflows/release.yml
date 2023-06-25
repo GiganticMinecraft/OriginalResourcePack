@@ -16,10 +16,10 @@ jobs:
         id: versions
         run: |
           OLD_VERSION=$(grep -o -m 1 -E "(v[0-9]+\.){1}[0-9]+(\.[0-9]+)?" pack.mcmeta)
-          echo ::set-output name=old_version::$OLD_VERSION
+          echo "old_version=$OLD_VERSION" >> $GITHUB_OUTPUT
           echo "Old Version: $OLD_VERSION"
           NEW_VERSION=$(grep -o -m 1 -E "(v[0-9]+\.){1}[0-9]+(\.[0-9]+)?" UpdatedLog.md)
-          echo ::set-output name=new_version::$NEW_VERSION
+          echo "new_version=$NEW_VERSION" >> $GITHUB_OUTPUT
           echo "New Version: $NEW_VERSION"
       - name: Check versions
         run: |
@@ -43,7 +43,7 @@ jobs:
         id: zip_name
         run: |
           ZIP_NAME=$(echo "seichi_tex_${{ steps.versions.outputs.new_version }}.zip")
-          echo ::set-output name=zip_name::$ZIP_NAME
+          echo "zip_name=$ZIP_NAME" >> $GITHUB_OUTPUT
           echo "Zip file name: $ZIP_NAME"
       - name: Remove unnecessary files and folders
         run: |
