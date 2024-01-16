@@ -60,7 +60,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: make_zip
     steps:
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: zip_file
       - name: Send the zip to the server
@@ -73,7 +73,7 @@ jobs:
     needs: make_zip
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: zip_file
       - name: Extract release notes from UpdatedLog.md
