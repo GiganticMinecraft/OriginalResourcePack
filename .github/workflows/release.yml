@@ -51,7 +51,7 @@ jobs:
           rm -rf renovate.json
       - name: Make a zip
         run: zip -r ${{ steps.zip_name.outputs.zip_name }} *
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: zip_file
           path: ${{ steps.zip_name.outputs.zip_name }}
