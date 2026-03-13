@@ -51,7 +51,7 @@ jobs:
           rm -rf renovate.json
       - name: Make a zip
         run: zip -r ${{ steps.zip_name.outputs.zip_name }} *
-      - uses: actions/upload-artifact@v6
+      - uses: actions/upload-artifact@v7
         with:
           name: zip_file
           path: ${{ steps.zip_name.outputs.zip_name }}
@@ -61,7 +61,7 @@ jobs:
     needs: make_zip
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/download-artifact@v7
+      - uses: actions/download-artifact@v8
         with:
           name: zip_file
       - name: Extract release notes from UpdatedLog.md
