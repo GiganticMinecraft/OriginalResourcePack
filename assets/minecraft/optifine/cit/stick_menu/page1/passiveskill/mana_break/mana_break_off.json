@@ -1,6 +1,6 @@
 {
-	"parent": "item/generated",
-	"textures": {
-		"layer0": "./mana_break_off"
-	}
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "./mana_break_off"
+  }
 }
