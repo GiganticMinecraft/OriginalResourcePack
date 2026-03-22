@@ -1,6 +1,6 @@
 {
-	"parent": "item/generated",
-	"textures": {
-		"layer0": "./eskill5"
-	}
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "./eskill5"
+  }
 }

@@ -1,6 +1,6 @@
 {
-	"parent": "item/generated",
-	"textures": {
-		"layer0": "./point_del"
-	}
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "./point_del"
+  }
 }
