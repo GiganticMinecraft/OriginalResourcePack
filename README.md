@@ -14,29 +14,19 @@
 
 **自動・手動での適用問わず、以下のModを導入する必要があります。**  
 すべて**1.18.2に対応したもの**を使用してください。  
-各リンクの下に書いてあるバージョンで動作確認済みとなります。（リンクもそのバージョンになっています。）  
+各Modの名前の下に書いてあるバージョンで動作確認済みとなります。（リンクもそのバージョンになっています。）  
 なお、Fabricを使用しますので、**OptiFineやForgeなどとの併用はできません**。
 
 - [Fabric API](https://modrinth.com/mod/fabric-api/version/0.77.0+1.18.2)
   - 0.77.0+1.18.2
-- [Fabric Language Kotlin](https://modrinth.com/mod/fabric-language-kotlin/version/1.13.9+kotlin.2.3.10)
-  - 1.13.9+kotlin.2.3.10
 - [Animatica](https://modrinth.com/mod/animatica/version/0.5+1.18.2)
   - 0.5+1.18.2
 - [CIT Resewn](https://modrinth.com/mod/cit-resewn/version/1.1.1+1.18.2)
   - 1.1.1+1.18.2
-- [cloth-config2](https://modrinth.com/mod/cloth-config/version/6.5.102)
-  - 6.5.102
+- [Mod Menu](https://modrinth.com/mod/mOgUt4GM/version/nVxObSbX)
+  - 3.2.5
 - [Continuity](https://modrinth.com/mod/continuity/version/2.0.2+1.18.2)
   - 2.0.2+1.18.2
-- [Custom Entity Models](https://modrinth.com/mod/cem/version/0.7.1)
-  - 0.7.1
-- [Enhanced Block Entities](https://modrinth.com/mod/ebe/version/0.7.1+1.18.2)
-  - 0.7.1+1.18.2
-- [[ETF] Entity Texture Features](https://modrinth.com/mod/entitytexturefeatures/version/MbHYReOp)
-  - 6.0.1
-- [Sodium](https://modrinth.com/mod/sodium/version/mc1.18.2-0.4.1)
-  - 0.4.1
 
 Modが導入できたら、以下のうちいずれかに進んでください。  
 あとから適用方法を切り替えることもできます。
