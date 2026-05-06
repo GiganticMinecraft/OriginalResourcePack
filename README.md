@@ -19,12 +19,8 @@
 
 - [Fabric API](https://modrinth.com/mod/fabric-api/version/0.77.0+1.18.2)
   - 0.77.0+1.18.2
-- [Animatica](https://modrinth.com/mod/animatica/version/0.5+1.18.2)
-  - 0.5+1.18.2
 - [CIT Resewn](https://modrinth.com/mod/cit-resewn/version/1.1.1+1.18.2)
   - 1.1.1+1.18.2
-- [Mod Menu](https://modrinth.com/mod/mOgUt4GM/version/nVxObSbX)
-  - 3.2.5
 - [Continuity](https://modrinth.com/mod/continuity/version/2.0.2+1.18.2)
   - 2.0.2+1.18.2
 
