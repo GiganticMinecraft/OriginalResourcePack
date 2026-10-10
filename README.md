@@ -79,6 +79,7 @@ Modが導入できたら、以下のうちいずれかに進んでください�
 - [ ] リソースパックは最新のバージョンのものを使用していますか？
 - [ ] Minecraft上でリソースパックは正しいものを選択していますか？
 - [ ] Minecraft上で本リソースパックが一番上に位置していますか？
+- [ ] 前提Modではありませんが、[Sodium](https://modrinth.com/mod/sodium)を同時に使用する場合は、[Indium](https://modrinth.com/mod/indium)が必要です。導入されていますか？（Minecraft 1.18.xに対応するSodiumは0.4.1のため、Indiumの導入が必要です）
 
 上記をすべて確認してもリソースパックが適用されない場合は、[整地鯖 お問い合わせフォーム](https://www.seichi.network/access)よりご連絡ください。
 
